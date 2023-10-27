@@ -5,7 +5,32 @@ file_version: 1.1.3
 app_version: 1.18.17
 ---
 
-Wow
+This is some doc
+
+<br/>
+
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+### 📄 03/main.py
+```python
+5      @dataclasses.dataclass
+6      class Rucksack:
+7          compartments: list[set[str]]
+8      
+9      class FileRucksackFactory:
+10         def __init__(self, filename: str):
+11             self.__filename = filename
+12             
+13         def get_rucksacks(self) -> Iterable[Rucksack]:
+14             with open(self.__filename, "r") as file:
+15                 for line in file:
+16                     print('test')
+17                     line = line.strip()
+18                     half = len(line) // 2
+19                     compartment_1 = set(line[:half])
+20                     compartment_2 = set(line[half:])
+21                     yield Rucksack([compartment_1, compartment_2])
+```
 
 <br/>
 

@@ -13,6 +13,7 @@ class FileRucksackFactory:
     def get_rucksacks(self) -> Iterable[Rucksack]:
         with open(self.__filename, "r") as file:
             for line in file:
+                print('test')
                 line = line.strip()
                 half = len(line) // 2
                 compartment_1 = set(line[:half])
@@ -20,6 +21,7 @@ class FileRucksackFactory:
                 yield Rucksack([compartment_1, compartment_2])
 
 class ItemPriorityCalculator:
+    _test = 123
     __first_priority_lower = ord("a")
     __last_priority_lower = ord("z")
 
