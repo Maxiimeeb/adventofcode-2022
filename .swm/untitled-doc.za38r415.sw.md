@@ -12,6 +12,8 @@ This is some doc
 
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 03/main.py
+<!-- collapsed -->
+
 ```python
 5      @dataclasses.dataclass
 6      class Rucksack:
